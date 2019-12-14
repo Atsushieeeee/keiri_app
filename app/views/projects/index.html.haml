@@ -1,0 +1,250 @@
+%body
+  #wrapper.clearfix
+    %header
+      .h-body
+        .h-b-conteiner
+          .h-b-title
+            =image_tag "headerlogo.png",size: '',class: "headerlogo", alt:"headerlogo"
+          .h-b-menu
+            %ul.h-b-menulist
+              %li TOP
+              %li
+                .modal_wrap
+                  %input#trigger{:type => "checkbox"}/
+                  .modal_overlay
+                    %label.modal_trigger{:for => "trigger"}
+                    .modal_content
+                      %label.close_button{:for => "trigger"} ✖️
+                      %h2 ABOUT
+                      %p 数値が間違っている場合はお手数ですがCONTACTから連絡お願いします。
+                      %p ※利用は自己責任でお願いします
+                %label.open_button{:for => "trigger"} ABOUT
+              %li CONTACT
+            .h-b-m-bottom
+              .h-b-m-b-left
+                %h2 文字サイズ変更
+              .h-b-m-b-right
+                .h-b-fontsize
+                  %input#font-m{:checked => "checked", :name => "fontradio", :type => "radio"}/
+                  %label{:for => "font-m"} 標準
+                  %input#font-l{:name => "fontradio", :type => "radio"}/
+                  %label{:for => "font-l"} 拡大
+    / サイドバー
+    .side
+      %a{:href => "#1"} 手形分割計算
+      %a{:href => "#2"} 預金利息
+      %a{:href => "#3"} 非上場株式配当金
+      %a{:href => "#4"} 上場株式配当金
+      %a{:href => "#5"} 契約書
+      %a{:href => "#6"} 源泉
+      %a{:href => "#7"} 売上代金に係る金銭又は有価証券の受取書
+      / サイドバー終わり
+    .main
+      / 手形分割計算
+      #1.contents
+        .contents-1
+          %h2 手形分割計算
+          .contents-1-wrap
+            .contents-1-left
+              .contents-1-form
+                %form#form1{:action => "", :name => "form1"}
+                  手形金額入力：
+                  %input#textbox1{:type => "text", :value => ""}/
+              .contents-1-select
+                %select{:id => "", :name => ""}
+                  %option#target1 手形2枚
+                  %option#target2 手形3枚
+              .contents-1-button
+                %input#mathButton1.mathButton{:type => "button", :value => "計算"}/
+                %input#clear1.clearButton{:type => "button", :value => "クリア"}/
+              .contents-1-comment
+                %p ※金額は半角数字で入力してください
+                %p ※利用は自己責任でお願いします
+              .contents-1-result
+                .tegata
+                  #tegata1
+                  #tegata2
+                  #tegata3
+                .insi
+                  #insi1
+                  #insi2
+                  #insi3
+            .contents-1-right
+              .contents-1-data
+                %table
+                  %tr
+                    %th 10万円未満
+                    %td 非課税
+                    %td 3千万円を超え5千万円以下
+                    %td 1万円
+                  %tr
+                    %th 10万円以上100万円以下
+                    %td 200円
+                    %td 5千万円を超え1億円以下
+                    %td 2万円
+                  %tr
+                    %th 100万円を超え200万円以下
+                    %td 400円
+                    %td 1億円を超え2億円以下
+                    %td 4万円
+                  %tr
+                    %th 200万円を超え300万円以下
+                    %td 600円
+                    %td 2億円を超え3億円以下
+                    %td 6万円
+                  %tr
+                    %th 300万円を超え500万円以下
+                    %td 1千円
+                    %td 3億円を超え5億円以下
+                    %td 10万円
+                  %tr
+                    %th 500万円を超え1千万円以下
+                    %td 2千円
+                    %td 5億円を超え10億円以下
+                    %td 15万円
+                  %tr
+                    %th 1千万円を超え2千万円以下
+                    %td 4千円
+                    %td 10億円を超えるもの
+                    %td 20万円
+                  %tr
+                    %th 2千万円を超え3千万円以下
+                    %td 6千円
+                    %td
+                    %td
+      / 手形分割計算終わり
+      / 預金利息
+      #2.contents
+        .contents-2
+          %h2 預金利息
+          .contents-2-wrap
+            .contents-2-form
+              %form#form2{:action => "", :name => "form2"}
+                入金額：
+                %input#textbox2{:type => "text", :value => ""}/
+            .contents-2-button
+              %input#mathButton2.mathButton{:type => "button", :value => "計算"}/
+              %input#clear2.clearButton{:type => "button", :value => "クリア"}/
+            .contents-2-comment
+              %p ※金額は半角数字で入力してください
+              %p ※利用は自己責任でお願いします
+            .contents-2-result
+              #c2risoku
+              #c2syotoku
+              #c2hukkou
+              #c2totalTax
+      / 預金利息終わり
+      / 非上場株式配当金
+      #3.contents
+        .contents-3
+          %h2 非上場株式配当金
+          .contents-3-wrap
+            .contents-3-form
+              %form#form3{:action => "", :name => "form3"}
+                入金額：
+                %input#textbox3{:type => "text", :value => ""}/
+            .contents-3-button
+              %input#mathButton3.mathButton{:type => "button", :value => "計算"}/
+              %input#clear3.clearButton{:type => "button", :value => "クリア"}/
+            .contents-3-comment
+              %p ※金額は半角数字で入力してください
+              %p ※利用は自己責任でお願いします
+            .contents-3-result
+              #haitou1
+              #syotoku1
+              #hukkou1
+              #totalTax1
+      / 非上場株式配当金終わり
+      / 上場株式配当金
+      #4.contents
+        .contents-4
+          %h2 上場株式配当金
+          .contents-4-wrap
+            .contents-4-form
+              %form#form4{:action => "", :name => "form4"}
+                入金額：
+                %input#textbox4{:type => "text", :value => ""}/
+            .contents-4-button
+              %input#mathButton4.mathButton{:type => "button", :value => "計算"}/
+              %input#clear4.clearButton{:type => "button", :value => "クリア"}/
+            .contents-4-comment
+              %p ※金額は半角数字で入力してください
+              %p ※利用は自己責任でお願いします
+            .contents-4-result
+              #haitou2
+              #syotoku2
+              #hukkou2
+              #totalTax2
+      / 上場株式配当金終わり
+      / 契約書
+      #5.contents
+        .contents-5
+          %h2 契約書
+          .contents-5-wrap
+            .contents-5-form
+              %form#form5{:action => "", :name => "form5"}
+                金額：
+                %input#textbox5{:type => "text", :value => ""}/
+            .contents-5-select
+              %select{:id => "", :name => ""}
+                %option#keiyaku1 不動産、鉱業権、無体財産権、船舶若しくは航空機又は営業の譲渡に関する契約書
+                %option#keiyaku2 請負に関する契約書
+            .contents-5-button
+              %input#mathButton5.mathButton{:type => "button", :value => "計算"}/
+              %input#clear5.clearButton{:type => "button", :value => "クリア"}/
+            .contents-5-comment
+              %p ※金額は半角数字で入力してください
+              %p ※利用は自己責任でお願いします
+            .contents-5-result
+              %p#c5comment1
+              %p#c5comment2
+              #keiyaku
+      / 契約書終わり
+      / 源泉計算
+      #6.contents
+        .contents-6
+          %h2 源泉
+          .contents-6-wrap
+            .contents-6-form
+              %form#form6{:action => "", :name => "form6"}
+                手取金額：
+                %input#textbox6{:type => "text", :value => ""}/
+            .contents-6-select
+              %select{:id => "", :name => ""}
+                %option#gensen1 講演料等報酬の源泉計算
+                %option#gensen2 税理士等報酬の源泉計算
+            .contents-6-button
+              %input#mathButton6.mathButton{:type => "button", :value => "計算"}/
+              %input#clear6.clearButton{:type => "button", :value => "クリア"}/
+            .contents-6-comment
+              %p ※金額は半角数字で入力してください
+              %p ※利用は自己責任でお願いします
+            .contents-6-result
+              #ghousyuu
+              #gsyotoku
+              #ghukkou
+              #gtotalTax
+      / 源泉計算終わり
+      / 売上代金に係る金銭又は有価証券の受取書
+      #7.contents
+        .contents-7
+          %h2 売上代金に係る金銭又は有価証券の受取書
+          .contents-7-wrap
+            .contents-7-form
+              %form#form7{:action => "", :name => "form7"}
+                金額：
+                %input#textbox7{:type => "text", :value => ""}/
+            .contents-7-button
+              %input#mathButton7.mathButton{:type => "button", :value => "計算"}/
+              %input#clear7.clearButton{:type => "button", :value => "クリア"}/
+            .contents-7-comment
+              %p ※金額は半角数字で入力してください
+              %p ※利用は自己責任でお願いします
+            .contents-7-result
+              #output24
+              #output25
+              #output26
+              #output27
+      / 売上代金に係る金銭又は有価証券の受取書終わり
+    %footer
+      %h2 ©Atsushi Endo

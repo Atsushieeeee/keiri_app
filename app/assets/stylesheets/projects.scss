@@ -1,0 +1,623 @@
+/* レスポンシブ */
+@media screen and (max-width: 750px){
+  table {display:none}
+  }
+
+/* レスポンシブ */
+
+
+/* ヘッダー */
+
+
+header{
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100px;
+  z-index: 999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #EFE8E8;
+  border: #BDBDBD solid 1px;
+  box-shadow: 0 0 2px gray;
+}
+
+.headerlogo{
+  width: 250px;
+  height: 98px;
+}
+
+.h-body{
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.h-b-conteiner{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.h-b-title{
+  text-align: center;
+  width: 60vw;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  order: 0;
+}
+
+.h-b-menu{
+  width: 40vw;
+  order:0;
+  align-items: center;
+  flex-direction: column;
+}
+.h-b-menulist{
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+}
+
+.modal_wrap input{
+  display: none;
+}
+
+.modal_overlay{
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
+}
+
+.modal_trigger{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_content{
+  align-self: flex-start;
+  width: 60%;
+  padding: 30px 30px 15px;
+  box-sizing: border-box;
+  background: #fff;
+  line-height: 1.4em;
+  transform: translateY(-100%);
+  transition: 0.5s;
+}
+
+.close_button{
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal_wrap input:checked ~ .modal_overlay{
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s;
+}
+
+.modal_wrap input:checked ~ .modal_overlay .modal_content{
+  transform: translateY(20px);
+}
+
+header li{
+  font-size: 12px;
+  color: #424242;
+}
+.h-b-m-bottom{
+  /* justify-content: space-around; */
+  flex-direction: row;
+  display: flex;
+}
+
+.h-b-m-b-left{
+  width: 20vw;
+  display: inline-block;
+}
+
+.h-b-m-b-right{
+  width: 20vw;
+  display: inline-block;
+}
+
+.h-b-m-b-left h2{
+  line-height: 40px;
+  font-size: 13px;
+  color: #424242;
+  text-align: right;
+  padding-right: 5px;
+}
+
+ /* === ボタンを表示するエリア ============================== */
+ .h-b-fontsize {
+  position       : relative;            /* 親要素が基点       */
+  width          : 120px;               /* ボタンの横幅       */
+  height         : 40px;                /* ボタンの高さ       */
+
+}
+ 
+ /* === ラジオボタン ======================================== */
+.h-b-fontsize input[type="radio"] {
+  display        : none;            /* チェックボックス非表示 */
+}
+ 
+ /* === ラジオボタンのラベル（標準） ======================== */
+.h-b-fontsize label {
+  display        : block;               /* ボックス要素に変更 */
+  position       : absolute;            /* 親要素からの相対位置*/
+  top            : 0;                   /* 標準表示位置(上)   */
+  bottom         : 0;                   /* 標準表示位置(下)   */
+  left           : 0;                   /* 標準表示位置(左)   */
+  right          : 0;                   /* 標準表示位置(右)   */
+  text-align     : center;              /* 文字位置は中央     */
+  line-height    : 40px;                /* 1行の高さ(中央寄せ)*/
+  font-size      : 14pt;                /* 文字サイズ         */
+  border         : 2px solid #ccc;      /* 枠線(一旦四方向)   */
+}
+ 
+ /* === ON側のラジオボタンのラベル（標準） ================== */
+.h-b-fontsize #font-m + label {
+  right          : 50%;                 /* 右端を中央に変更   */
+  border-radius  : 6px 0 0 6px;         /* 角丸(左側の上下)   */
+  background     : #eee;                /* 背景               */
+  color          : #666;                /* 文字色             */
+  border-right   : none;                /* 枠線の右側を消す   */
+}
+ 
+ /* === ON側のラジオボタンのラベル（ONのとき） ============== */
+.h-b-fontsize #font-m:checked +label {
+  background-color: #668ad8;
+  color          : #fff;
+}
+ 
+ /* === OFF側のラジオボタンのラベル（標準） ================ */
+.h-b-fontsize #font-l + label {
+  left           : 50%;                 /* 左端を中央に変更   */
+  border-radius  : 0 6px 6px 0;         /* 角丸(右側の上下)   */
+  background     : #eee;                /* 背景               */
+  color          : #666;                /* 文字色             */
+  border-left    : none;                /* 枠線の左側を消す   */
+}
+ 
+ /* === OFF側のラジオボタンのラベル（OFFのとき） ============= */
+.h-b-fontsize #font-l:checked +label {
+  background-color: #668ad8;
+  color          : #fff;
+}
+
+
+/* ヘッダー終わり */
+
+/* サイドバー */
+.side {
+  box-sizing: border-box;
+  width: 20vw;
+  height: calc(100vh - 150px);
+  float: left;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  position: fixed;
+  border-right: 1px solid #BDBDBD;
+  display: flex;
+  flex-direction: column;
+}
+#title{
+  margin: 2px;
+  font-size: 20px;
+
+}
+
+.side a{
+  font-size: 13px;
+  margin: 5px;
+  text-decoration: none;
+  flex: 1;
+  background-color:#EAE9E9;
+  color: #424242;
+  /* color: #FFF; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 2px gray;
+  border-bottom: solid 4px #627295;
+
+
+}
+.side a:hover{
+  background-color: #EFF1F1;
+}
+
+
+
+/* メイン */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.main {
+  box-sizing: border-box;
+  width: 80vw;
+  /* height: calc(100% - 150px); */
+  float: right;
+  /* border: 1px solid gray; */
+  
+}
+.contents{
+  height: calc(100vh - 150px);
+  color: #424242;
+}
+.contents:first-child{
+  margin-top: 100px;
+}
+.contents:last-child{
+  margin-bottom: 50px;
+}
+.contents p{
+  font-size: 11px;
+  color: #BDBDBD;
+}
+.contents h2{
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+/* メイン */
+
+/* フッター */
+
+footer{
+  box-sizing: border-box;
+  clear: both;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
+  position: fixed;
+  bottom: 0px;
+  background-color:#EFE8E8;
+  color: #424242;
+  border: #BDBDBD solid 1px;
+  box-shadow: 0 0 2px gray;
+
+}
+
+footer h2{
+  text-align: center;
+  line-height: 50px;
+  font-size: 13px;
+}
+
+/* フッター */
+
+
+/* 手形分割 */
+.contents-1 {
+  height: calc(100vh - 150px);
+  width: 80vw;
+}
+
+.contents-1-wrap{
+  flex-direction: row;
+  display: flex;  
+  justify-content: space-between;
+  margin: 0px 10%;
+
+}
+.contents-1-left{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contents-1-form{
+  display: inline-block;
+  justify-content: flex-start;
+}
+
+.contents-1-select{
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.contents-1 select{
+  width: 200px;
+  height: 30px;
+  font-size: 13px;
+}
+
+.contents-1-button{
+  text-align: center;
+  padding: 10px;
+}
+
+.contents-1-comment{
+  padding: 10px;
+  text-align: center;
+}
+
+.contents-1-result{
+  flex-direction: row;
+  display: flex;
+  font-size: 14px;
+}
+
+.insi{
+  padding-left:15px;
+}
+
+.tegata{
+  padding-right: 15px;
+}
+
+.contents-1-right{
+  display: inline-block;
+  justify-content: flex-end;
+}
+
+table{
+  border: #6E6E6E 1px solid;
+  font-size: 11px;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th,table td{
+  padding: 4px 15px;
+  text-align: left;
+}
+
+table tr:nth-child(odd){
+  background-color: #eee
+}
+
+/* 手形分割 */
+
+/* 預金利息 */
+
+.contents-2-form{
+  text-align: center;
+}
+
+.contents-2-button{
+  text-align: center;
+  padding: 10px;
+}
+
+.contents-2-comment{
+  padding: 10px;
+  text-align: center;
+}
+
+.contents-2-result{
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 預金利息 */
+
+/* 非上場株式配当金 */
+.contents-3-form{
+  text-align: center;
+}
+
+.contents-3-button{
+  text-align: center;
+  padding: 10px;
+}
+
+.contents-3-comment{
+  padding: 10px;
+  text-align: center;
+}
+
+.contents-3-result{
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 非上場株式配当金 */
+
+/* 上場配当金 */
+.contents-4-form{
+  text-align: center;
+}
+
+.contents-4-button{
+  text-align: center;
+  padding: 10px;
+}
+
+.contents-4-comment{
+  padding: 10px;
+  text-align: center;
+}
+
+.contents-4-result{
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 上場配当金 */
+
+/* 契約書 */
+
+
+.contents-5-form{
+  text-align: center;
+}
+
+.contents-5-select{
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.contents-5 select{
+  width: 200px;
+  height: 30px;
+  font-size: 13px;
+}
+
+.contents-5-button{
+  text-align: center;
+  padding: 10px;
+}
+
+.contents-5-comment{
+  padding: 10px;
+  text-align: center;
+}
+
+.contents-5-result{
+  flex-direction: column;
+  display: flex;
+  font-size: 14px;
+}
+
+#c5comment1,#c5comment2,#keiyaku {
+  text-align: center;
+}
+
+.contents-5 select{
+  width: 520px;
+}
+
+/* 契約書 */
+
+/* 源泉 */
+
+.contents-6-form{
+  text-align: center;
+}
+
+.contents-6-select{
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.contents-6 select{
+  width: 200px;
+  height: 30px;
+  font-size: 13px;
+}
+
+.contents-6-button{
+  text-align: center;
+  padding: 10px;
+}
+
+.contents-6-comment{
+  padding: 10px;
+  text-align: center;
+}
+
+.contents-6-result{
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  font-size: 14px;
+}
+
+.contents-6 select{
+  width: 250px;
+}
+
+
+/* 源泉 */
+
+/* 受取書 */
+
+.contents-7-form{
+  text-align: center;
+}
+
+.contents-7-button{
+  text-align: center;
+  padding: 10px;
+}
+
+.contents-7-comment{
+  padding: 10px;
+  text-align: center;
+}
+
+.contents-7-result{
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  font-size: 14px;
+}
+
+.contents-7 select{
+  width: 250px;
+}
+
+/* 受取書 */
+
+
+
+/* ボタン */
+.mathButton {
+  display: inline-block;
+  padding: 0.2em 1.2em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  border-bottom: solid 4px #627295;
+  color: #FFF;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+.mathButton:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+.clearButton {
+  display: inline-block;
+  padding: 0.2em 1.2em;
+  text-decoration: none;
+  background: #FA5858;/*ボタン色*/
+  border-bottom: solid 4px #B43104;
+  color: #FFF;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.clearButton:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+/* ボタン */

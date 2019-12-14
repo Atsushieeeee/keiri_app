@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title 時短経理
+    = csrf_meta_tags
+
+    %link{rel: "stylesheet", type: "text/css", href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
+    %link{rel: "stylesheet", type: "text/css", href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"}
+    %link{ rel: "stylesheet", type: "text/css", href: "/modules/slick/slick-theme.scss"}
+    %link{rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.11.2/css/all.css"}
+    %link{:href => "http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{ src: "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'    
+
+  %body
+  = yield
