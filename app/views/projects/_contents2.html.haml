@@ -1,0 +1,19 @@
+#2.contents
+  .contents-2
+    %h2 預金利息
+    .contents-2-wrap
+      .contents-2-form
+        %form#form2{:action => "", :name => "form2"}
+          入金額：
+          %input#textbox2{:type => "text", :value => ""}/
+      .contents-2-button
+        %input#mathButton2.mathButton{:type => "button", :value => "計算"}/
+        %input#clear2.clearButton{:type => "button", :value => "クリア"}/
+      .contents-2-comment
+        %p ※金額は半角数字で入力してください
+        %p ※利用は自己責任でお願いします
+      .contents-2-result
+        #c2risoku
+        #c2syotoku
+        #c2hukkou
+        #c2totalTax

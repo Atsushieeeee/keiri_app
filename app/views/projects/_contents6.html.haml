@@ -1,0 +1,23 @@
+#6.contents
+  .contents-6
+    %h2 源泉
+    .contents-6-wrap
+      .contents-6-form
+        %form#form6{:action => "", :name => "form6"}
+          手取金額：
+          %input#textbox6{:type => "text", :value => ""}/
+      .contents-6-select
+        %select{:id => "", :name => ""}
+          %option#gensen1 講演料等報酬の源泉計算
+          %option#gensen2 税理士等報酬の源泉計算
+      .contents-6-button
+        %input#mathButton6.mathButton{:type => "button", :value => "計算"}/
+        %input#clear6.clearButton{:type => "button", :value => "クリア"}/
+      .contents-6-comment
+        %p ※金額は半角数字で入力してください
+        %p ※利用は自己責任でお願いします
+      .contents-6-result
+        #ghousyuu
+        #gsyotoku
+        #ghukkou
+        #gtotalTax
