@@ -1,0 +1,29 @@
+%header
+  .h-body
+    .h-b-conteiner
+      .h-b-title
+        =image_tag "headerlogo.png",size: '',class: "headerlogo", alt:"headerlogo"
+      .h-b-menu
+        %ul.h-b-menulist
+          %li TOP
+          %li
+            .modal_wrap
+              %input#trigger{:type => "checkbox"}/
+              .modal_overlay
+                %label.modal_trigger{:for => "trigger"}
+                .modal_content
+                  %label.close_button{:for => "trigger"} ✖️
+                  %h2 ABOUT
+                  %p 数値が間違っている場合はお手数ですがCONTACTから連絡お願いします。
+                  %p ※利用は自己責任でお願いします
+            %label.open_button{:for => "trigger"} ABOUT
+          %li CONTACT
+        .h-b-m-bottom
+          .h-b-m-b-left
+            %h2 文字サイズ変更
+          .h-b-m-b-right
+            .h-b-fontsize
+              %input#font-m{:checked => "checked", :name => "fontradio", :type => "radio"}/
+              %label{:for => "font-m"} 標準
+              %input#font-l{:name => "fontradio", :type => "radio"}/
+              %label{:for => "font-l"} 拡大

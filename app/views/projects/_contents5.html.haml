@@ -1,0 +1,22 @@
+#5.contents
+  .contents-5
+    %h2 契約書
+    .contents-5-wrap
+      .contents-5-form
+        %form#form5{:action => "", :name => "form5"}
+          金額：
+          %input#textbox5{:type => "text", :value => ""}/
+      .contents-5-select
+        %select{:id => "", :name => ""}
+          %option#keiyaku1 不動産、鉱業権、無体財産権、船舶若しくは航空機又は営業の譲渡に関する契約書
+          %option#keiyaku2 請負に関する契約書
+      .contents-5-button
+        %input#mathButton5.mathButton{:type => "button", :value => "計算"}/
+        %input#clear5.clearButton{:type => "button", :value => "クリア"}/
+      .contents-5-comment
+        %p ※金額は半角数字で入力してください
+        %p ※利用は自己責任でお願いします
+      .contents-5-result
+        %p#c5comment1
+        %p#c5comment2
+        #keiyaku
