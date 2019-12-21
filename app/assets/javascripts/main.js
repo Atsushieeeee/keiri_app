@@ -3,12 +3,12 @@ $(function(){
  
   // 標準ボタンクリック
   $('#font-m').click(function(){
-    $("p").css('font-size', '0.5rem');
+    $(".caution").css('font-size', '0.7rem');
   });
   
   // 拡大ボタンクリック
   $('#font-l').click(function(){
-    $("p").css('font-size', '1rem');
+    $(".caution").css('font-size', '1rem');
   });
 });
 // 文字サイズ変更

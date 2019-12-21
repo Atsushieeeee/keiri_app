@@ -67,6 +67,27 @@ header{
   padding-inline-end: 40px;
 }
 
+.fa-home{
+  font-size: 21px;
+  color:#ccc;
+  right: 38%;
+  position: absolute;
+}
+
+.fa-question-circle{
+  font-size: 21px;
+  color:#ccc;
+  right: 24%;
+  position: absolute;
+}
+
+.fa-envelope{
+  font-size: 21px;
+  color:#ccc;
+  right: 9%;
+  position: absolute;
+}
+
 .modal_wrap input{
   display: none;
 }
@@ -229,27 +250,41 @@ header li{
 
 }
 
-.side a{
-  font-size: 13px;
+.side-btn {
   margin: 5px;
-  text-decoration: none;
   flex: 1;
   background-color:#EAE9E9;
-  color: #424242;
   /* color: #FFF; */
   display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0 0 2px gray;
   border-bottom: solid 4px #627295;
+  justify-content: center;
+  align-items: center;
+}
 
-
+.side a{
+  text-decoration: none;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .side a:hover{
   background-color: #EFF1F1;
 }
 
+.side p{
+  font-size: 14px;
+  color: #424242;
+}
 
+.fa-angle-right{
+  font-size: 28px;
+  color:#ccc;
+  right: 10%;
+  position: absolute;
+}
 
 /* メイン */
 .clearfix::after {

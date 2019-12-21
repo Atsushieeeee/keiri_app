@@ -5,8 +5,10 @@
         =image_tag "headerlogo.png",size: '',class: "headerlogo", alt:"headerlogo"
       .h-b-menu
         %ul.h-b-menulist
+          %i.fas.fa-home
           %li TOP
           %li
+            %i.fas.fa-question-circle
             .modal_wrap
               %input#trigger{:type => "checkbox"}/
               .modal_overlay
@@ -18,6 +20,7 @@
                   %p ※利用は自己責任でお願いします
             %label.open_button{:for => "trigger"} ABOUT
           %li CONTACT
+          %i.far.fa-envelope
         .h-b-m-bottom
           .h-b-m-b-left
             %h2 文字サイズ変更
