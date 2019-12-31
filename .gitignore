@@ -28,3 +28,47 @@
 /config/secrets.yml
 /config/environments/development.rb
 /mailers/application_mailer.rb
+
+# Created by https://www.gitignore.io/api/rails
+
+### Rails ###
+*.rbc
+capybara-*.html
+.rspec
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+
+# Ignore bundler config.
+/.bundle
+/vendor/bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+public/assets/*
+
+# Ignore Byebug command history file.
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+# dotenv
+# TODO Comment out this rule if environment variables can be committed
+.env
+
+# Only include if you have production secrets in this file, which is no longer a Rails default
+# config/secrets.yml
+
+# End of https://www.gitignore.io/api/rails
+
+.DS_Store
+.gitignore.bkup
+/public/packs
+/public/packs-test
