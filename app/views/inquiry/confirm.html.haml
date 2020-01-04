@@ -1,20 +1,30 @@
-.page-header
-  %h1 お問い合わせ
-= form_for @inquiry, :url => inquiry_thanks_path do |f|
-  %table.table
-    %tr
-      %th 名前
-      %td
-        = f.hidden_field :name
-        = @inquiry.name
-    %tr
-      %th メールアドレス
-      %td
-        = f.hidden_field :email
-        = @inquiry.email
-    %tr
-      %th お問い合わせ内容
-      %td
-        = f.hidden_field :message
-        = simple_format(@inquiry.message)
-  = f.submit '送信', :class => 'btn btn-primary'
+= render "/projects/header"
+.wrap
+  = form_for @inquiry, :url => inquiry_thanks_path do |f|
+    %h1
+      お問い合わせ
+    .box-wrap
+      .box
+        .form-header
+          .item-name
+            お名前
+        .text-wrap
+          = f.hidden_field :name
+          = @inquiry.name
+      .box
+        .form-header
+          .item-name
+            メールアドレス
+        .text-wrap
+          = f.hidden_field :email
+          = @inquiry.email
+      .box
+        .form-header
+          .item-name
+            メッセージ
+        .textarea-wrap
+          = f.hidden_field :message
+          = simple_format(@inquiry.message)
+    .submit-wrap
+      = f.submit '送信'
+= render "footer"
