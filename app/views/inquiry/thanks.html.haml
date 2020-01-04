@@ -1,4 +1,8 @@
-.page-header
-  %h1 お問い合わせ
-%p
-  お問い合わせいただきありがとうございました。
+= render "/projects/header"
+.wrap
+  .page-header
+    %h1 お問い合わせ
+  %p.thanks
+    お問い合わせいただきありがとうございました。
+  = link_to '戻る', root_path, data: {"turbolinks" => false}, class: "back-btn"
+= render "footer"
