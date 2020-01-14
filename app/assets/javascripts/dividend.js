@@ -1,3 +1,5 @@
+$(document).on('turbolinks:load', function(){
+
 $(function(){
   // 3桁区切り
   function addFigure(str) {
@@ -42,4 +44,6 @@ $(function(){
     totalTax2.innerHTML = "税額合計 : " + addFigure(val6);
   });
   // 受取配当金終わり
+});
+
 });

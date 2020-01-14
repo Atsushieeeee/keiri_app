@@ -1,3 +1,5 @@
+$(document).on('turbolinks:load', function(){
+
 $(function(){
   // 3桁区切り
   function addFigure(str) {
@@ -93,5 +95,7 @@ $(function(){
   // 講演料等報酬の源泉計算
 
   // 源泉計算終わり
+
+});
 
 });

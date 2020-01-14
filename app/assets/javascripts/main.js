@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function(){
 // 文字サイズ変更
 $(function(){
  
@@ -75,4 +76,5 @@ $(function(){
       return false;
     });
     // 画面スムーススクロール終わり
+});
 });

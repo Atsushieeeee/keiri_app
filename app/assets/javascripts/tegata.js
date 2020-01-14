@@ -1,3 +1,5 @@
+$(document).on('turbolinks:load', function(){
+
 $(function(){
   // 3桁区切り
   function addFigure(str) {
@@ -435,4 +437,5 @@ $(function(){
       insi3.innerHTML = "印紙3枚目 : " + addFigure(val13);
     }
   });
+});
 });
