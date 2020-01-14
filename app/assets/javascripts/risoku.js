@@ -1,3 +1,5 @@
+$(document).on('turbolinks:load', function(){
+
 $(function(){
   // 3桁区切り
   function addFigure(str) {
@@ -22,4 +24,6 @@ $(function(){
     c2hukkou.innerHTML = "復興税額 : " + addFigure(val3);
     c2totalTax.innerHTML = "税額合計 : " + addFigure(val6);
   });
+});
+
 });

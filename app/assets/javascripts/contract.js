@@ -1,3 +1,5 @@
+$(document).on('turbolinks:load', function(){
+
 $(function(){
   // 3桁区切り
   function addFigure(str) {
@@ -76,5 +78,6 @@ $(function(){
     keiyaku.innerHTML = "印紙 : " + addFigure(val);
     }
   });
+});
 });
   // 契約書終わり
