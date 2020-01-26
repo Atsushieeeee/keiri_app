@@ -37,10 +37,10 @@ $(function(){
     var val5 = val3 - val4;
     }
 
-    ghousyuu.innerHTML = "報酬金額 : " + addFigure(val2);
-    gsyotoku.innerHTML = "所得税額 : " + addFigure(val4);
-    ghukkou.innerHTML = "復興税額 : " + addFigure(val5);
-    gtotalTax.innerHTML = "税額合計 : " + addFigure(val3);
+    ghousyuu.innerHTML = addFigure(val2);
+    gsyotoku.innerHTML = addFigure(val4);
+    ghukkou.innerHTML = addFigure(val5);
+    gtotalTax.innerHTML = addFigure(val3);
 
   }else{
 
@@ -59,10 +59,10 @@ $(function(){
       var val5 = val3 - val4;
       }
   
-    ghousyuu.innerHTML = "報酬金額 : " + addFigure(val2);
-    gsyotoku.innerHTML = "所得税額 : " + addFigure(val4);
-    ghukkou.innerHTML = "復興税額 : " + addFigure(val5);
-    gtotalTax.innerHTML = "税額合計 : " + addFigure(val3);
+    ghousyuu.innerHTML = addFigure(val2);
+    gsyotoku.innerHTML = addFigure(val4);
+    ghukkou.innerHTML = addFigure(val5);
+    gtotalTax.innerHTML = addFigure(val3);
     }
 
   });

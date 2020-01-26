@@ -259,40 +259,36 @@ header li{
   border-right: 1px solid #BDBDBD;
   display: flex;
   flex-direction: column;
+  &-btn{
+    margin: 5px;
+    flex: 1;
+    background-color:#EAE9E9;
+    display: flex;
+    box-shadow: 0 0 2px gray;
+    border-bottom: solid 4px #627295;
+    justify-content: center;
+    align-items: center;
+  }
+  a{
+    text-decoration: none;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &:hover{
+      background-color: #EFF1F1;
+    }
+  }
+  p{
+    font-size: 14px;
+    color: #424242;
+  }
 }
+
 #title{
   margin: 2px;
   font-size: 20px;
-
-}
-
-.side-btn {
-  margin: 5px;
-  flex: 1;
-  background-color:#EAE9E9;
-  /* color: #FFF; */
-  display: flex;
-  box-shadow: 0 0 2px gray;
-  border-bottom: solid 4px #627295;
-  justify-content: center;
-  align-items: center;
-}
-
-.side a{
-  text-decoration: none;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.side a:hover{
-  background-color: #EFF1F1;
-}
-
-.side p{
-  font-size: 14px;
-  color: #424242;
 }
 
 .fa-angle-right{
@@ -301,6 +297,8 @@ header li{
   right: 10%;
   position: absolute;
 }
+
+/* サイドバー終わり */
 
 /* メイン */
 .clearfix::after {
@@ -319,22 +317,23 @@ header li{
 .contents{
   height: calc(100vh - 150px);
   color: #424242;
+  &:first-child{
+    margin-top: 100px;
+  }
+  &:last-child{
+    margin-bottom: 50px;
+  }
+  p{
+    font-size: 11px;
+    color: #BDBDBD;
+  }
+  h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+  }
 }
-.contents:first-child{
-  margin-top: 100px;
-}
-.contents:last-child{
-  margin-bottom: 50px;
-}
-.contents p{
-  font-size: 11px;
-  color: #BDBDBD;
-}
-.contents h2{
-  text-align: center;
-  padding: 10px;
-  font-size: 20px;
-}
+
 /* メイン */
 
 /* フッター */
@@ -351,14 +350,12 @@ footer{
   color: #424242;
   border: #BDBDBD solid 1px;
   box-shadow: 0 0 2px gray;
-
-}
-
-footer h2{
-  text-align: center;
-  line-height: 50px;
-  font-size: 13px;
-  font-weight: normal;
+  h2{
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    font-weight: normal;
+  }
 }
 
 /* フッター */
@@ -367,57 +364,71 @@ footer h2{
 /* 手形分割 */
 #textbox1{
   height: 30px;
-  width: 120px;
+  width: 150px;
 }
 .contents-1 {
   height: calc(100vh - 150px);
   width: 80vw;
-}
-
-.contents-1-wrap{
-  flex-direction: row;
-  display: flex;  
-  justify-content: space-between;
-  margin: 0px 10%;
-
-}
-.contents-1-left{
-  display: flex;
-  flex-direction: column;
-}
-
-
-.contents-1-form{
-  display: inline-block;
-  justify-content: flex-start;
-}
-
-.contents-1-select{
-  padding: 10px;
-  text-align: center;
-  
-}
-
-.contents-1 select{
-  width: 200px;
-  height: 30px;
-  font-size: 13px;
-}
-
-.contents-1-button{
-  text-align: center;
-  padding: 10px;
-}
-
-.contents-1-comment{
-  padding: 10px;
-  text-align: center;
-}
-
-.contents-1-result{
-  flex-direction: row;
-  display: flex;
-  font-size: 14px;
+  &-wrap{
+    flex-direction: row;
+    display: flex;  
+    justify-content: space-between;
+    margin: 0px 10%;
+  }
+  &-left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-form{
+    display: inline-block;
+    justify-content: flex-start;
+  }
+  &-select{
+    padding: 10px;
+    text-align: center;
+    select{
+      width: 200px;
+      height: 30px;
+      font-size: 13px;
+    }
+  }
+  &-button{
+    text-align: center;
+    padding: 10px;
+  }
+  &-comment{
+    padding: 10px;
+    text-align: center;
+  }
+  &-result{
+    flex-direction: row;
+    display: flex;
+    font-size: 14px;
+  }
+  &-right{
+    display: inline-block;
+    justify-content: flex-end;
+  }
+  &-table{
+    border: #6E6E6E 1px solid;
+    font-size: 11px;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    th,td{
+      padding: 4px 15px;
+      text-align: left;
+      font-weight: normal;
+    }
+    tr:nth-child(odd){
+      background-color: #eee
+    }
+    tr:first-child{
+      border-bottom: 1px solid #6E6E6E;
+    }
+  }
 }
 
 .insi{
@@ -428,211 +439,268 @@ footer h2{
   padding-right: 15px;
 }
 
-.contents-1-right{
-  display: inline-block;
-  justify-content: flex-end;
-}
-
-.contents-1-table{
-  border: #6E6E6E 1px solid;
-  font-size: 11px;
-  width: 100%;
-  height: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.contents-1-table th,.contents-1-table td{
-  padding: 4px 15px;
-  text-align: left;
-  font-weight: normal;
-}
-
-.contents-1-table tr:nth-child(odd){
-  background-color: #eee
-}
-
 /* 手形分割 */
 
 /* 預金利息 */
 
-.contents-2-form{
-  text-align: center;
+.contents-2{
+  &-form{
+    text-align: center;
+  }
+  &-button{
+    text-align: center;
+    padding: 10px;
+  }
+  &-comment{
+    padding: 10px;
+    text-align: center;  
+  }
+  &-result{
+    text-align: center;
+    font-size: 14px;
+  }
+  &-table{
+    font-size: 14px;
+    margin: 0 auto;
+    tr th{
+      color: #424242;
+      font-weight: normal;
+    }
+  }
 }
 
-.contents-2-button{
-  text-align: center;
-  padding: 10px;
-}
-
-.contents-2-comment{
-  padding: 10px;
-  text-align: center;
-}
-
-.contents-2-result{
-  text-align: center;
-  font-size: 14px;
+#c2risoku,#c2syotoku,#c2hukkou,#c2totalTax{
+  text-align: right;
 }
 
 /* 預金利息 */
 
 /* 非上場株式配当金 */
-.contents-3-form{
-  text-align: center;
+
+.contents-3{
+  &-form{
+    text-align: center;
+  }
+  &-button{
+    text-align: center;
+    padding: 10px;  
+  }
+  &-comment{
+    padding: 10px;
+    text-align: center;
+  }
+  &-result{
+    text-align: center;
+    font-size: 14px;
+  }
+  &-table{
+    font-size: 14px;
+    margin: 0 auto;
+    tr th{
+      color: #424242;
+      font-weight: normal;
+    }
+  }
 }
 
-.contents-3-button{
-  text-align: center;
-  padding: 10px;
-}
-
-.contents-3-comment{
-  padding: 10px;
-  text-align: center;
-}
-
-.contents-3-result{
-  text-align: center;
-  font-size: 14px;
+#haitou1,#syotoku1,#hukkou1,#totalTax1 {
+  text-align: right;
 }
 
 /* 非上場株式配当金 */
 
 /* 上場配当金 */
-.contents-4-form{
-  text-align: center;
+.contents-4{
+  &-form{
+    text-align: center;
+  }
+  &-button{
+    text-align: center;
+    padding: 10px;  
+  }
+  &-comment{
+    padding: 10px;
+    text-align: center;
+  }
+  &-result{
+    text-align: center;
+    font-size: 14px;
+  }
+  &-table{
+    font-size: 14px;
+    margin: 0 auto;
+    tr th{
+      color: #424242;
+      font-weight: normal;
+    }
+  }
 }
 
-.contents-4-button{
-  text-align: center;
-  padding: 10px;
-}
-
-.contents-4-comment{
-  padding: 10px;
-  text-align: center;
-}
-
-.contents-4-result{
-  text-align: center;
-  font-size: 14px;
+#haitou2,#syotoku2,#hukkou2,#totalTax2 {
+  text-align: right;
 }
 
 /* 上場配当金 */
 
 /* 契約書 */
 
-
-.contents-5-form{
-  text-align: center;
-}
-
-.contents-5-select{
-  padding: 10px;
-  text-align: center;
-  
-}
-
-.contents-5 select{
-  width: 200px;
-  height: 30px;
-  font-size: 13px;
-}
-
-.contents-5-button{
-  text-align: center;
-  padding: 10px;
-}
-
-.contents-5-comment{
-  padding: 10px;
-  text-align: center;
-}
-
-.contents-5-result{
-  flex-direction: column;
-  display: flex;
-  font-size: 14px;
+.contents-5{
+  &-form{
+    text-align: center;
+  }
+  &-select{
+    padding: 10px;
+    text-align: center;
+  }
+  select{
+    width: 520px;
+    height: 30px;
+    font-size: 13px;  
+  }
+  &-button{
+    text-align: center;
+    padding: 10px;
+  }
+  &-comment{
+    padding: 10px;
+    text-align: center;  
+  }
+  &-result{
+    flex-direction: column;
+    display: flex;
+    font-size: 14px;
+  }
 }
 
 #c5comment1,#c5comment2,#keiyaku {
   text-align: center;
 }
 
-.contents-5 select{
-  width: 520px;
-}
-
 /* 契約書 */
 
 /* 源泉 */
 
-.contents-6-form{
-  text-align: center;
+.contents-6{
+  &-form{
+    text-align: center;
+  }
+  &-select{
+    padding: 10px;
+    text-align: center;
+  }
+  select{
+    width: 250px;
+    height: 30px;
+    font-size: 13px;
+  }
+  &-button{
+    text-align: center;
+    padding: 10px;
+  }
+  &-comment{
+    padding: 10px;
+    text-align: center;
+  }
+  &-result{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    font-size: 14px;
+  }
+  &-table{
+    font-size: 14px;
+    margin: 0 auto;
+    tr th{
+      color: #424242;
+      font-weight: normal;
+    }
+  }
 }
 
-.contents-6-select{
-  padding: 10px;
-  text-align: center;
-  
+#ghousyuu,#gsyotoku,#ghukkou,#gtotalTax {
+  text-align: right;
 }
-
-.contents-6 select{
-  width: 200px;
-  height: 30px;
-  font-size: 13px;
-}
-
-.contents-6-button{
-  text-align: center;
-  padding: 10px;
-}
-
-.contents-6-comment{
-  padding: 10px;
-  text-align: center;
-}
-
-.contents-6-result{
-  text-align: center;
-  flex-direction: column;
-  display: flex;
-  font-size: 14px;
-}
-
-.contents-6 select{
-  width: 250px;
-}
-
 
 /* 源泉 */
 
 /* 受取書 */
 
-.contents-7-form{
-  text-align: center;
+#textbox7{
+  height: 30px;
+  width: 150px;
 }
 
-.contents-7-button{
-  text-align: center;
-  padding: 10px;
+.contents-7{
+  height: calc(100vh - 150px);
+  width: 80vw;
+  &-wrap{
+    flex-direction: row;
+    display: flex;  
+    justify-content: space-between;
+    margin: 0px 10%;
+  }
+  &-left{
+    display: flex;
+    flex-direction: column;
+  }
+  &-form{
+    display: inline-block;
+    justify-content: flex-start;
+  }
+  &-select{
+    padding: 10px;
+    text-align: center;
+  }
+  select{
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+  }
+  &-button{
+    text-align: center;
+    padding: 10px;
+  }
+  &-comment{
+    padding: 10px;
+    text-align: center;
+  }
+  &-result{
+    flex-direction: row;
+    display: flex;
+    font-size: 14px;
+  }
+  &-right{
+    display: inline-block;
+    justify-content: flex-end;
+  }
+  &-table{
+    border: #6E6E6E 1px solid;
+    font-size: 11px;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    th,td{
+      padding: 4px 15px;
+      text-align: left;
+      font-weight: normal;
+    }
+    tr:nth-child(odd){
+      background-color: #eee
+    }
+    tr:first-child{
+      border-bottom: 1px solid #6E6E6E;
+    }
+  }
 }
 
-.contents-7-comment{
-  padding: 10px;
-  text-align: center;
+
+.insi{
+  padding-left:15px;
 }
 
-.contents-7-result{
-  text-align: center;
-  flex-direction: column;
-  display: flex;
-  font-size: 14px;
-}
-
-.contents-7 select{
-  width: 250px;
+.tegata{
+  padding-right: 15px;
 }
 
 /* 受取書 */
@@ -649,14 +717,12 @@ footer h2{
   color: #FFF;
   font-size: 15px;
   border-radius: 3px;
-}
-
-.mathButton:active {
-  /*ボタンを押したとき*/
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);/*下に動く*/
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-  border-bottom: none;
+  &:active{
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+  }
 }
 
 .clearButton {
@@ -668,13 +734,12 @@ footer h2{
   color: #FFF;
   border-radius: 3px;
   font-size: 15px;
+  &:active{
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+  }
 }
 
-.clearButton:active {
-  /*ボタンを押したとき*/
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);/*下に動く*/
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-  border-bottom: none;
-}
 /* ボタン */
