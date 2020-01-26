@@ -19,10 +19,10 @@ $(function(){
     var val4 = val2 - val3;
     var val5 = val2 + val;
     var val6 = val3 + val4;
-    c2risoku.innerHTML = "受取利息 : " + addFigure(val5);
-    c2syotoku.innerHTML = "所得税額 : " + addFigure(val4);
-    c2hukkou.innerHTML = "復興税額 : " + addFigure(val3);
-    c2totalTax.innerHTML = "税額合計 : " + addFigure(val6);
+    c2risoku.innerHTML = addFigure(val5);
+    c2syotoku.innerHTML = addFigure(val4);
+    c2hukkou.innerHTML = addFigure(val3);
+    c2totalTax.innerHTML = addFigure(val6);
   });
 });
 

@@ -22,10 +22,10 @@ $(function(){
     var val4 = val2 - val3;
     var val5 = val2 + val;
     var val6 = val4 + val3
-    haitou1.innerHTML = "配当金額 : " + addFigure(val5);
-    syotoku1.innerHTML = "所得税額 : " + addFigure(val4);
-    hukkou1.innerHTML = "復興税額 : " + addFigure(val3);
-    totalTax1.innerHTML = "税額合計 : " + addFigure(val6);
+    haitou1.innerHTML = addFigure(val5);
+    syotoku1.innerHTML = addFigure(val4);
+    hukkou1.innerHTML = addFigure(val3);
+    totalTax1.innerHTML = addFigure(val6);
   });
 
 
@@ -38,10 +38,10 @@ $(function(){
     var val5 = val2 + val;
     var val6 = val4 + val3
 
-    haitou2.innerHTML = "配当金額 : " + addFigure(val5);
-    syotoku2.innerHTML = "所得税額 : " + addFigure(val4);
-    hukkou2.innerHTML = "復興税額 : " + addFigure(val3);
-    totalTax2.innerHTML = "税額合計 : " + addFigure(val6);
+    haitou2.innerHTML = addFigure(val5);
+    syotoku2.innerHTML = addFigure(val4);
+    hukkou2.innerHTML = addFigure(val3);
+    totalTax2.innerHTML = addFigure(val6);
   });
   // 受取配当金終わり
 });
