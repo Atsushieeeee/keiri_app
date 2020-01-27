@@ -2,7 +2,7 @@
   .h-body
     .h-b-conteiner
       .h-b-title
-        =image_tag "headerlogo.png",size: '',class: "headerlogo", alt:"headerlogo"
+        =link_to image_tag("headerlogo.png",size: '',class: "headerlogo", alt:"headerlogo"), root_path
       .h-b-menu
         %ul.h-b-menulist
           %i.fas.fa-home
@@ -10,7 +10,7 @@
           %li
             %i.fas.fa-question-circle
             .modal_wrap
-              %input#trigger{:type => "checkbox"}/
+              %input#trigger{:type => "checkbox"}
               .modal_overlay
                 %label.modal_trigger{:for => "trigger"}
                 .modal_content
@@ -26,7 +26,7 @@
             %h2 文字サイズ変更
           .h-b-m-b-right
             .h-b-fontsize
-              %input#font-m{:checked => "checked", :name => "fontradio", :type => "radio"}/
+              %input#font-m{:checked => "checked", :name => "fontradio", :type => "radio"}
               %label{:for => "font-m"} 標準
-              %input#font-l{:name => "fontradio", :type => "radio"}/
+              %input#font-l{:name => "fontradio", :type => "radio"}
               %label{:for => "font-l"} 拡大
