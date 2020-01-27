@@ -18,8 +18,13 @@ $(function(){
     var cash = parseInt(document.getElementById("textbox1").value);
     var element1 = document.getElementById( "target1" ) ;
     var element2 = document.getElementById( "target2" ) ;
+
+    // 上1桁を取り除く
+    var cut1 = parseInt(document.getElementById("textbox1").value.slice(1));
     // 上2桁を取り除く
     var cut2 = parseInt(document.getElementById("textbox1").value.slice(2));
+
+    // 印紙を変数化
     var st0 = "0円"
     var st200 = "200円"
     var st400 = "400円"
@@ -37,9 +42,9 @@ $(function(){
     // 印紙金額を変数化しておく　→　DB、gem 'gon'を使ったcontrollerに記述、modelに格納　色々簡略化する方向
     if ( element1.selected ) {
 
-      if (0 <= cash && cash <= 100000) { val1 = cash , val2 = "", val11 = "0円", val12 = ""}
+      if (0 <= cash && cash <= 100000) { val1 = cash , val2 = "", val11 = st0, val12 = ""}
       else if (100001 <= cash && cash <= 1000000) { val1 = cash , val2 = "", val11 = st200, val12 = ""}
-      else if (1000001 <= cash && cash <= 1099999) { val1 = "1000000" , val2 = cut2, val11 = st200, val12 = "0円"}
+      else if (1000001 <= cash && cash <= 1099999) { val1 = "1000000" , val2 = cut1, val11 = st200, val12 = "0円"}
       else if (1100000 <= cash && cash <= 2000000) { val1 = cash, val2 = "", val11 = "400円", val12 = ""}
       else if (2000001 <= cash && cash <= 2099999) { val1 = "2000000" , val2 = cash - 2000000, val11 = "400円", val12 = "0円"}
       else if (2100000 <= cash && cash <= 3000000) { val1 = cash, val2 = "", val11 = "600円", val12 = ""}
@@ -64,11 +69,11 @@ $(function(){
       else if (23000001 <= cash && cash <= 25000000) { val1 = "20000000" , val2 = cash - 20000000, val11 = "4000円", val12 = "1000円"}
       else if (25000001 <= cash && cash <= 30000000) { val1 = cash, val2 = "",  val11 = "6000円", val12 = ""}
       else if (30000001 <= cash && cash <= 30099999) { val1 = "30000000" , val2 = cash - 30000000, val11 = "6000円", val12 = "0円"}
-      else if (30100000 <= cash && cash <= 31000000) { val1 = "30000000" , val2 = cash - 30000000, val11 = "6000円", val12 = "200円"}
-      else if (31000001 <= cash && cash <= 32000000) { val1 = "30000000" , val2 = cash - 30000000, val11 = "6000円", val12 = "400円"}
+      else if (30100000 <= cash && cash <= 31000000) { val1 = "30000000" , val2 = cut1, val11 = "6000円", val12 = "200円"}
+      else if (31000001 <= cash && cash <= 32000000) { val1 = "30000000" , val2 = cut1, val11 = "6000円", val12 = "400円"}
       else if (32000001 <= cash && cash <= 33000000) { val1 = "30000000" , val2 = cash - 30000000, val11 = "6000円", val12 = "600円"}
       else if (33000001 <= cash && cash <= 35000000) { val1 = "30000000" , val2 = cash - 30000000, val11 = "6000円", val12 = "1000円"}
-      else if (35000001 <= cash && cash <= 40000000) { val1 = "30000000",  val2 = cash - 30000000, tegata3.innerHTML = "6000円", val12 = "2000円"}
+      else if (35000001 <= cash && cash <= 40000000) { val1 = "30000000",  val2 = cash - 30000000, val11 = "6000円", val12 = "2000円"}
       else if (40000001 <= cash && cash <= 50000000) { val1 = cash, val2 = "",  val11 = "10000円", val12 = ""}
       else if (50000001 <= cash && cash <= 50099999) { val1 = "50000000" , val2 = cash - 50000000, val11 = "10000円", val12 = "0円"}
       else if (50100000 <= cash && cash <= 51000000) { val1 = "50000000" , val2 = cash - 50000000, val11 = "10000円", val12 = "200円"}
