@@ -14,20 +14,20 @@
         %input#mathButton6.mathButton{:type => "button", :value => "計算"}
         %input#clear6.clearButton{:type => "button", :value => "クリア"}
       .contents-6-comment
-        %p.caution ※金額は半角数字で入力してください
-        %p.caution ※利用は自己責任でお願いします
+        %p ※金額は半角数字で入力してください
+        %p ※利用は自己責任でお願いします
       .contents-6-result
         %table.contents-4-table
-          %tr
+          %tr.caution
             %th 報酬金額 :
             %td#ghousyuu
-          %tr
+          %tr.caution
             %th 所得税額 :
             %td#gsyotoku
-          %tr
+          %tr.caution
             %th 復興税額 :
             %td#ghukkou
-          %tr
+          %tr.caution
             %th 税額合計 :
             %td#gtotalTax    
 
