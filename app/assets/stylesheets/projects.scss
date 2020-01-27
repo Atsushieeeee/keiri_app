@@ -1,9 +1,4 @@
-/* レスポンシブ */
-@media screen and (max-width: 750px){
-  .contents-1-table {display:none}
-  }
 
-/* レスポンシブ */
 
 
 /* ヘッダー */
@@ -166,7 +161,6 @@ header li{
   color: #424242;
 }
 .h-b-m-bottom{
-  /* justify-content: space-around; */
   flex-direction: row;
   display: flex;
 }
@@ -747,3 +741,18 @@ footer{
 }
 
 /* ボタン */
+
+/* レスポンシブ */
+@media screen and (max-width: 900px){
+  .contents-1-table {display:none}
+  .fas {display:none!important}
+  .side-btn p{font-size:9px}
+  }
+
+@media screen and (max-width: 1250px){
+  .h-b-menu {display:none}
+  }
+  
+
+
+/* レスポンシブ */
