@@ -6,7 +6,11 @@
         .contents-7-form
           %form#form7{:action => "", :name => "form7"}
             金額：
-            %input#textbox7{:type => "tel", :value => ""}
+            %input#textbox7{:type => "text", :value => ""}/
+        .contents-7-select
+          %select{:id => "", :name => ""}
+            %option#target11 受取書2枚
+            %option#target12 受取書3枚
         .contents-7-button
           %input#mathButton7.mathButton{:type => "button", :value => "計算"}
           %input#clear7.clearButton{:type => "button", :value => "クリア"}
@@ -14,31 +18,59 @@
           %p.caution ※金額は半角数字で入力してください
           %p.caution ※利用は自己責任でお願いします
         .contents-7-result
-          .caution#output24
-          .caution#output25
-          .caution#output26
-          .caution#output27
+          .receipt
+            #receipt1
+            #receipt2
+            #receipt3
+          .insi
+            #rinsi1
+            #rinsi2
+            #rinsi3
       .contents-7-right
         .contents-7-data
           %table.contents-7-table
             %tr
               %th 記載金額
               %td 税額
+              %th 記載金額
+              %td 税額
             %tr
               %th 5万円未満
               %td 非課税
+              %td 3千万円を超え5千万円以下
+              %td 1万円
             %tr
               %th 5万円以上100万円以下
               %td 200円
+              %td 5千万円を超え1億円以下
+              %td 2万円
             %tr
               %th 100万円を超え200万円以下
               %td 400円
+              %td 1億円を超え2億円以下
+              %td 4万円
             %tr
               %th 200万円を超え300万円以下
               %td 600円
+              %td 2億円を超え3億円以下
+              %td 6万円
             %tr
               %th 300万円を超え500万円以下
-              %td 1000円
+              %td 1千円
+              %td 3億円を超え5億円以下
+              %td 10万円
             %tr
-              %th 500万円を超え1000万円以下
-              %td 2000円
+              %th 500万円を超え1千万円以下
+              %td 2千円
+              %td 5億円を超え10億円以下
+              %td 15万円
+            %tr
+              %th 1千万円を超え2千万円以下
+              %td 4千円
+              %td 10億円を超えるもの
+              %td 20万円
+            %tr
+              %th 2千万円を超え3千万円以下
+              %td 6千円
+              %td
+              %td
