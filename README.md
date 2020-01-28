@@ -1,24 +1,27 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# keiri_app 時短経理
+## 経理アプリ　「時短経理」とは
+経理業務でよく使う計算を数値を入力するだけで簡単に仕訳がわかるアプリです。
+振込された金額から仕訳を作成する補助的な役割や支払手形作成時の収入印紙の節約等、幅広く日常業務のサポートを出来るように作りました。
 
-Things you may want to cover:
+## 使用言語
+Ruby 2.5.1
+JavaScript (jQuery 3.4.1)
 
-* Ruby version
+## 使用フレームワーク
+Rails 5.2.3
 
-* System dependencies
+## アプリの使い方
 
-* Configuration
+[![Image from Gyazo](https://i.gyazo.com/e0d629c9b3fa3df8eff22b9591610dc0.gif)](https://gyazo.com/e0d629c9b3fa3df8eff22b9591610dc0)
 
-* Database creation
+フォームに数値を入力後　計算　を押すと項目に応じた結果が返ってきます。
+クリアボタンで各項目ごとに入力した数値を削除出来ます。
 
-* Database initialization
+## こだわった点
+* シンプルな使いやすさを重視しました。
+会計システムで見慣れたサイドバースタイルにし、複数ページを開かないようにシングルページで全ての機能を使えるようにしています。
 
-* How to run the test suite
+* ActiveModelを使ってDBを使わない「問い合わせフォーム」を作りました。
+validationなどの設定をModelに書くことで非常にシンプルかつ便利にしました。
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
