@@ -13,7 +13,7 @@ Rails 5.2.3
 
 ## アプリの使い方
 
-[![Image from Gyazo](https://i.gyazo.com/e0d629c9b3fa3df8eff22b9591610dc0.gif)](https://gyazo.com/e0d629c9b3fa3df8eff22b9591610dc0)
+[![Image from Gyazo](https://i.gyazo.com/22d7294697b5156f735fa56754d0fac1.gif)](https://gyazo.com/22d7294697b5156f735fa56754d0fac1)
 
 フォームに数値を入力後　計算　を押すと項目に応じた結果が返ってきます。
 クリアボタンで各項目ごとに入力した数値を削除出来ます。
