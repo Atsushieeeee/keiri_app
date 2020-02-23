@@ -12,8 +12,8 @@ header{
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: #EFE8E8;
-  border: #BDBDBD solid 1px;
+  background-color: #FFD40D;
+  border-bottom: #55C3F2 solid 1px;
   box-shadow: 0 0 2px gray;
 }
 
@@ -74,21 +74,21 @@ header{
 }
 .fa-home{
   font-size: 21px;
-  color:#ccc;
+  color:#55C3F2;
   right: 38%;
   position: absolute;
 }
 
 .fa-question-circle{
   font-size: 21px;
-  color:#ccc;
+  color:#55C3F2;
   right: 24%;
   position: absolute;
 }
 
 .fa-envelope{
   font-size: 21px;
-  color:#ccc;
+  color:#55C3F2;
   right: 9%;
   position: absolute;
 }
@@ -124,7 +124,7 @@ header{
   width: 60%;
   padding: 30px 30px 15px;
   box-sizing: border-box;
-  background: #fff;
+  background: #f8f4e6;
   line-height: 1.4em;
   transform: translateY(-100%);
   transition: 0.5s;
@@ -254,16 +254,17 @@ header li{
   margin-top: 100px;
   margin-bottom: 50px;
   position: fixed;
-  border-right: 1px solid #BDBDBD;
+  border-right: 1px solid #55C3F2;
   display: flex;
   flex-direction: column;
+  background-color: #f8f4e6;
   &-btn{
     margin: 5px;
     flex: 1;
-    background-color:#EAE9E9;
+    background-color:#ffe9a9;
     display: flex;
     box-shadow: 0 0 2px gray;
-    border-bottom: solid 4px #627295;
+    border-bottom: solid 4px #fac559;
     justify-content: center;
     align-items: center;
   }
@@ -275,7 +276,7 @@ header li{
     display: flex;
     align-items: center;
     &:hover{
-      background-color: #EFF1F1;
+      background-color: #fff3b8;
     }
   }
   p{
@@ -291,7 +292,7 @@ header li{
 
 .fa-angle-right{
   font-size: 28px;
-  color:#ccc;
+  color: #fac559;
   right: 10%;
   position: absolute;
 }
@@ -307,14 +308,13 @@ header li{
 .main {
   box-sizing: border-box;
   width: 80vw;
-  /* height: calc(100% - 150px); */
   float: right;
-  /* border: 1px solid gray; */
-  
+  background-color: #f8f4e6;  
 }
 .contents{
   height: calc(100vh - 150px);
   color: #424242;
+  background-color: #f8f4e6;
   &:first-child{
     margin-top: 100px;
   }
@@ -344,9 +344,9 @@ footer{
   z-index: 99;
   position: fixed;
   bottom: 0px;
-  background-color:#EFE8E8;
+  background-color:#FFD04D;
   color: #424242;
-  border: #BDBDBD solid 1px;
+  border-top: #55C3F2 solid 1px;
   box-shadow: 0 0 2px gray;
   h2{
     text-align: center;
@@ -423,6 +423,10 @@ footer{
     tr:nth-child(odd){
       background-color: #eee
     }
+    tr:nth-child(even){
+      background-color: #fff
+    }
+
     tr:first-child{
       border-bottom: 1px solid #6E6E6E;
     }
