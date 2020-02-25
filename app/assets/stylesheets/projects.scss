@@ -748,14 +748,43 @@ footer{
 
 /* レスポンシブ */
 @media screen and (max-width: 900px){
-  .contents-1-table {display:none}
-  .fas {display:none!important}
-  .side-btn p{font-size:9px}
+  .contents-1-table, .contents-7-table{
+    display:none
   }
 
-@media screen and (max-width: 1250px){
-  .h-b-menu {display:none}
+  .contents-1-left , .contents-7-left{
+    width: 100%;
+    text-align: center;
   }
+  
+  .contents-1-result , .contents-7-result{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .insi, .rinsi{
+    padding: 3px 0 0 0;
+  }
+
+  .tegata , .receipt{
+    padding: 0;
+  }
+
+  .fas {
+    display:none!important
+  }
+  .side-btn p{
+    font-size:9px
+  }
+
+}
+
+@media screen and (max-width: 1250px){
+  .h-b-menu {
+    display:none
+  }
+}
   
 
 
