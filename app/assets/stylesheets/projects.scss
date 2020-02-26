@@ -691,6 +691,11 @@ footer{
     tr:nth-child(odd){
       background-color: #eee
     }
+
+    tr:nth-child(even){
+      background-color: #fff
+    }
+
     tr:first-child{
       border-bottom: 1px solid #6E6E6E;
     }
