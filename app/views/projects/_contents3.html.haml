@@ -10,20 +10,20 @@
         %input#mathButton3.mathButton{:type => "button", :value => "計算"}
         %input#clear3.clearButton{:type => "button", :value => "クリア"}
       .contents-3-comment
-        %p.caution ※金額は半角数字で入力してください
-        %p.caution ※利用は自己責任でお願いします
+        %p ※金額は半角数字で入力してください
+        %p ※利用は自己責任でお願いします
       .contents-3-result
         %table.contents-3-table
-          %tr
+          %tr.caution
             %th 配当金額 :
             %td#haitou1
-          %tr
+          %tr.caution
             %th 所得税額 :
             %td#syotoku1
-          %tr
+          %tr.caution
             %th 復興税額 :
             %td#hukkou1
-          %tr
+          %tr.caution
             %th 税額合計 :
             %td#totalTax1     
         

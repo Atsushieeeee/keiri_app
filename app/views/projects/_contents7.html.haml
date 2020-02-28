@@ -15,17 +15,17 @@
           %input#mathButton7.mathButton{:type => "button", :value => "計算"}
           %input#clear7.clearButton{:type => "button", :value => "クリア"}
         .contents-7-comment
-          %p.caution ※金額は半角数字で入力してください
-          %p.caution ※利用は自己責任でお願いします
+          %p ※金額は半角数字で入力してください
+          %p ※利用は自己責任でお願いします
         .contents-7-result
           .receipt
-            #receipt1
-            #receipt2
-            #receipt3
+            #receipt1.caution
+            #receipt2.caution
+            #receipt3.caution
           .insi
-            #rinsi1
-            #rinsi2
-            #rinsi3
+            #rinsi1.caution
+            #rinsi2.caution
+            #rinsi3.caution
       .contents-7-right
         .contents-7-data
           %table.contents-7-table
