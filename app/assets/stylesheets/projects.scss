@@ -68,6 +68,12 @@ header{
   padding-inline-start: 40px;
   padding-inline-end: 40px;
 }
+
+.h-b-menulist li{
+  display: flex;
+  flex-direction: row;
+}
+
 .top{
   text-decoration: none;
   color: #424242;
@@ -77,25 +83,24 @@ header{
   text-decoration: none;
   color: #424242;
 }
+
+i{
+  margin-right: 5px;
+}
+
 .fa-home{
   font-size: 21px;
   color:#55C3F2;
-  right: 38%;
-  position: absolute;
 }
 
 .fa-question-circle{
   font-size: 21px;
   color:#55C3F2;
-  right: 24%;
-  position: absolute;
 }
 
 .fa-envelope{
   font-size: 21px;
   color:#55C3F2;
-  right: 9%;
-  position: absolute;
 }
 
 .modal_wrap input{
@@ -819,6 +824,7 @@ footer{
 
   .h-b-menulist{
     margin: 0;
+    justify-content: space-around;
   }
 }
   

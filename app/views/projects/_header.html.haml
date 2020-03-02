@@ -5,8 +5,9 @@
         =link_to image_tag("headerlogo.png",size: '',class: "headerlogo", alt:"headerlogo"), root_path
       .h-b-menu
         %ul.h-b-menulist
-          %i.fas.fa-home
-          %li= link_to 'TOP', root_path, class: "top"
+          %li
+            %i.fas.fa-home
+            = link_to 'TOP', root_path, class: "top"
           %li
             %i.fas.fa-question-circle
             .modal_wrap
@@ -19,8 +20,9 @@
                   %p 数値が間違っている場合はお手数ですがCONTACTから連絡お願いします。
                   %p ※利用は自己責任でお願いします
             %label.open_button{:for => "trigger"} ABOUT
-          %li= link_to 'CONTACT', 'inquiry', class: "contact"
-          %i.far.fa-envelope
+          %li
+            %i.far.fa-envelope
+            = link_to 'CONTACT', 'inquiry', class: "contact"
         .h-b-m-bottom
           .h-b-m-b-left
             %h2 文字サイズ変更
