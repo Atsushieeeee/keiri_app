@@ -15,17 +15,17 @@
           %input#mathButton1.mathButton{:type => "button", :value => "計算"}
           %input#clear1.clearButton{:type => "button", :value => "クリア"}
         .contents-1-comment
-          %p.caution ※金額は半角数字で入力してください
-          %p.caution ※利用は自己責任でお願いします
+          %p ※金額は半角数字で入力してください
+          %p ※利用は自己責任でお願いします
         .contents-1-result
           .tegata
-            #tegata1
-            #tegata2
-            #tegata3
+            #tegata1.caution
+            #tegata2.caution
+            #tegata3.caution
           .insi
-            #insi1
-            #insi2
-            #insi3
+            #insi1.caution
+            #insi2.caution
+            #insi3.caution
       .contents-1-right
         .contents-1-data
           %table.contents-1-table
